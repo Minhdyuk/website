@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-image: url('https://th.bing.com/th/id/OIP.VNpNgS-5uWDTNOnI2leMKQHaEv?rs=1&pid=ImgDetMain');
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+      height: 100vh; /* Adjust this value according to your needs */
+    }
+
+    .background::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      backdrop-filter: blur(4px);
+      pointer-events: none;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #c00000;
+      position: relative;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 0 16px;
+      line-height: 60px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover:not(.title) {
+      background-color: #141414;
+    }
+
+    .navbar .logo {
+      height: 40px;
+      margin-left: 20px;
+    }
+
+    .navbar .title {
+      font-size: 2.7em;
+    }
+
+    .navbar .links {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .content {
+      padding: 120px 20px 20px;
+      position: relative;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .content h1 {
+      font-size: 4em;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .content p {
+      font-size: 2em;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 30px;
+      position: relative;
+      width: 100%;
+      background-color: #141414;
+      color: white;
+      text-align: center;
+      font-size: 0.9em;
+      border-top: 1px solid #333;
+      line-height: 1.6;
+    }
+
+    .footer img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .footer a {
+      color: #e6e6e6;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .social-icons img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .footer .links-section {
+      flex: 1.2;
+    }
+
+    .footer .logo-section,
+    .footer .contact-section {
+      flex: 1;
+    }
+
+    .footer .social-icons {
+      flex: 0.7;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="navbar">
+  <img class="logo" src="https://raw.githubusercontent.com/Minhdyuk/desktop-website/main/LogoPATransparent.png" alt="Logo">
+  <a class="title">Padua Apartments</a>
+  <div class="links">
+    <a href="#home">Home</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="contact">Contact</a>
+  </div>
+</div>
+
+<main class="content">
+  <h1>Perfect Housing Solutions</h1>
+  <p>Experience Padua like never before</p>
+</main>
+
+<div style="height: 363px;"></div>
+
+
+<!-- New div for black space -->
+<div style="height: 1000px; background-color: black;"></div>
+
+
+
+
+<!-- New div for white space -->
+<div style="height: 1000px; background-color: white;"></div>
+
+
+
+<!-- New div for transparent space -->
+<div style="height: 1000px";></div>
+
+<!-- New div for white space -->
+<div style="height: 1000px; background-color: white;"></div>
+
+
+
+
+<div class="footer">
+  <!-- Your existing footer code -->
+</div>
+
+
+
+<div class="footer">
+  <div class="logo-section">
+    <img src="https://raw.githubusercontent.com/Minhdyuk/desktop-website/main/LogoPATransparent.png" alt="Logo">
+    <p>&copy; 2024 Padua Apartments. All rights reserved.</p>
+  </div>
+  <div class="links-section">
+    <p>
+      <a href="#home">Home</a> |
+      <a href="#rooms">Rooms</a> |
+      <a href="#faqs">FAQs</a> |
+      <a href="#about">About</a> |
+      <a href="#contact">Contact</a>
+    </p>
+  </div>
+  <div class="contact-section">
+    <p>+39 049 738 9621 - padua.apartments@gmail.com</p>
+    <p>Piazzale della Stazione 8, 35131 Padova (PD), Italia</p>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/your_facebook_page" target="_blank">
+      <img src="https://icon-library.com/images/white-facebook-icon-png/white-facebook-icon-png-0.jpg" alt="Facebook Icon" width="40" height="40">
+    </a>
+    <a href="https://wa.me/390497389621" target="_blank">
+      <img src="https://toppng.com/uploads/thumbnail/logo-whatsapp-branco-png-icone-whatsapp-png-branco-11562849301allxbzyi80.png" alt="WhatsApp Icon" width="40" height="40">
+    </a>
+  </div>
+</div>
+
+
+</body>
+</html>
