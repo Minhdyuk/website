@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Padua Apartments Home Page</title>
+    <meta name="description" content="Brief description of your page">
+    <meta name="keywords" content="Padua, Padova, room, apartment, erasmus, exchange, student, university, rent">
+
     <style>
         * {
             margin: 0;
@@ -152,17 +155,19 @@
             text-align: center; /* Center the text below the circles */
         }
 
-        .text-container h2 {
+        .highlight-section .text-container h2 {
             font-size: 2em;
             color: white;
             padding-top: 20px; /* Space between the text and the circles */
         }
 
-        .text-container h3 {
+        .highlight-section .text-container h3 {
             font-size: 1em;
-            color: darkgray;
+            color: lightgray;
             padding-top: 10px; /* Space between the text and the above text */
         }
+
+
 
         .more-text {
             color: white; /* Set the text color to white */
@@ -174,6 +179,88 @@
             text-align: center; /* Center the text */
             padding: 10px 0; /* Add some padding at the top and bottom */
         }
+
+
+
+
+
+
+
+
+
+        .white-section {
+            background-color: white; /* If you want to specify a background color */
+            padding: 20px; /* Add padding if you want some space inside the white section */
+            /* Add any other styles you want for this container */
+        }
+
+        .section {
+            display: flex;
+            background-color: white;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .section:hover {
+            transform: translateY(-10px);
+        }
+
+        .reverse-section {
+            flex-direction: row-reverse;
+        }
+
+        .image-container {
+            flex: 1;
+            padding: 10px;
+            overflow: hidden; /* This will clip the content to maintain the border-radius */
+            border-radius: 15px; /* Add this to maintain the rounded corners */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px; /* Ensure this matches the container's border-radius */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-container:hover img {
+            transform: scale(1.05);
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .text-container h2 {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .text-container p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .white-section h2 {
+            font-size: 48px; /* Adjust the size as needed */
+            color: #333; /* Adjust the color as needed */
+            /* Add any other styles specific to the white section */
+        }
+
+        .white-section h3 {
+            font-size: 18px; /* Adjust the size as needed */
+            color: #666; /* Adjust the color as needed */
+            /* Add any other styles specific to the white section */
+        }
+
+
+
 
 
 
@@ -318,15 +405,48 @@
 
 
 
-<div class="white-section" style="display: flex; background-color: white; padding: 0px;">
-    <div class="image-container" style="flex: 1;">
-        <img src="images/foto-giardini_dell_arena.jpg" alt="Descriptive Alt Text" style="width: 100%; height: auto;">
+
+
+
+<div class="white-section">
+
+<div class="section" onclick="animateSection(this)">
+    <div class="image-container">
+        <img src="https://media.istockphoto.com/id/175655529/de/foto/padova.jpg?s=612x612&w=0&k=20&c=oVELWERceMvJF9s_lpcogNnQUgKj5GkQ2i_JXc_WjAw=" alt="Urban View">
     </div>
-    <div class="text-container" style="flex: 1; padding-left: 20px;">
-        <h2>Your Title Here</h2>
-        <p>Your description here. This can be as long as you need, and it will wrap next to the image.</p>
+    <div class="text-container">
+        <h2>Advantageous Position</h2>
+        <p>Discover the comfort of living in the center of the city</p>
     </div>
 </div>
+
+<div class="section reverse-section" onclick="animateSection(this)">
+    <div class="image-container">
+        <img src="https://media.istockphoto.com/id/1389705272/de/foto/padua-italien-im-palazzo-della-ragione.jpg?s=612x612&w=0&k=20&c=d3pGCHBd_l9Z30QkKws9iEmw3J7L-B6WirshOrkDOqo=" alt="City Life">
+    </div>
+    <div class="text-container">
+        <h2>City Pulse</h2>
+        <p>Feel the heartbeat of the city's vibrant lifestyle</p>
+    </div>
+</div>
+
+<div class="section" onclick="animateSection(this)">
+    <div class="image-container">
+        <img src="https://media.istockphoto.com/id/1257410808/de/foto/italien-padua-via-roma.jpg?s=612x612&w=0&k=20&c=UB8C5Q1N7-zWPDkcLfeJkSyXGuU1WKaVGWt2lIziuUs=" alt="Modern Design">
+    </div>
+    <div class="text-container">
+        <h2>Modern Living</h2>
+        <p>Experience modern design and architecture at its finest</p>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
 
 
 
@@ -367,6 +487,19 @@
         </a>
     </div>
 </div>
+
+
+
+
+
+
+<script>
+    function animateSection(section) {
+        section.classList.toggle('active');
+        // Add more interactive JavaScript as needed
+    }
+</script>
+
 
 </body>
 </html>
